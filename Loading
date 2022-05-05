@@ -87,6 +87,7 @@ local function BWHFQ_fake_script() -- TickLoading.LocalScript
 		wait(1)
 		script.Parent.Parent.Parent.Parent.Parent.Enabled = false
 		wait(1)
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftwareRelease/main/Credits")()
 		script.Parent:TweenSize(UDim2.new(0, 0, 0), "Out", "Linear", 1, true)
 	end
 	
@@ -107,6 +108,7 @@ local function BWHFQ_fake_script() -- TickLoading.LocalScript
 		wait(1)
 		script.Parent.Parent.Parent.Parent.Parent.Enabled = false
 		wait(1)
+loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftwareRelease/main/Credits")()
 		script.Parent:TweenSize(UDim2.new(0, 0, 0), "Out", "Linear", 1, true) 
 	end
 	if screen == 3 then
