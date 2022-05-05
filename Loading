@@ -1,0 +1,199 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local LoadingBackground = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TickLoading = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Background.Name = "Background"
+Background.Parent = ScreenGui
+Background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Background.Position = UDim2.new(0.293010741, 0, 0.357852876, 0)
+Background.Size = UDim2.new(0, 285, 0, 34)
+
+UICorner.Parent = Background
+
+Frame.Parent = Background
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(-0.00172609091, 0, -0.024500072, 0)
+Frame.Size = UDim2.new(0, 285, 0, 145)
+
+UICorner_2.Parent = Frame
+
+LoadingBackground.Name = "LoadingBackground"
+LoadingBackground.Parent = Frame
+LoadingBackground.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+LoadingBackground.Position = UDim2.new(0.0701754391, 0, 0.668965518, 0)
+LoadingBackground.Size = UDim2.new(0, 244, 0, 30)
+
+UICorner_3.Parent = LoadingBackground
+
+TickLoading.Name = "TickLoading"
+TickLoading.Parent = LoadingBackground
+TickLoading.BackgroundColor3 = Color3.fromRGB(1, 255, 255)
+TickLoading.Size = UDim2.new(0, 9, 0, 30)
+
+UICorner_4.Parent = TickLoading
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Size = UDim2.new(0, 285, 0, 34)
+TextLabel.Font = Enum.Font.PatrickHand
+TextLabel.Text = "Anya SoftWare"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_5.Parent = TextLabel
+
+-- Scripts:
+TextLabel.Text = "Ohayo, "..game.Players.LocalPlayer.Name.."!"
+
+
+local function BWHFQ_fake_script() -- TickLoading.LocalScript 
+	local script = Instance.new('LocalScript', TickLoading)
+
+	local screen = math.random(1,3)
+	
+	if screen == 1 then
+		print '1'
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = true
+		wait(2)
+	
+		script.Parent:TweenSize(UDim2.new(.3, 1, 1), "Out", "Linear", 2, true)
+		wait(2)
+		script.Parent:TweenSize(UDim2.new(.5, 1, 1), "Out", "Linear", 1, true)
+		wait(3)
+		script.Parent:TweenSize(UDim2.new(1, 1, 1), "Out", "Linear", 1, true)
+	
+	
+		wait(1)
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = false
+		wait(1)
+		script.Parent:TweenSize(UDim2.new(0, 0, 0), "Out", "Linear", 1, true)
+	end
+	
+	if screen == 2 then
+		print '2'
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = true
+		wait(2)
+	
+		script.Parent:TweenSize(UDim2.new(.1, 1, 1), "Out", "Linear", 3, true)
+		wait(1)
+		script.Parent:TweenSize(UDim2.new(.4, 1, 1), "Out", "Linear", 2, true)
+		wait(4)
+		script.Parent:TweenSize(UDim2.new(.7, 1, 1), "Out", "Linear", 3, true)
+		wait(1)
+		script.Parent:TweenSize(UDim2.new(1, 1, 1), "Out", "Linear", 1, true)
+	
+	
+		wait(1)
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = false
+		wait(1)
+		script.Parent:TweenSize(UDim2.new(0, 0, 0), "Out", "Linear", 1, true) 
+	end
+	if screen == 3 then
+		print '3'
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = true
+		wait(2)
+	
+		script.Parent:TweenSize(UDim2.new(.6, 1, 1), "Out", "Linear", 2, true)
+		wait(2)
+		script.Parent:TweenSize(UDim2.new(.8, 1, 1), "Out", "Linear", 3, true)
+		wait(3)
+		script.Parent:TweenSize(UDim2.new(1, 1, 1), "Out", "Linear", 1, true)
+	
+	
+		wait(1)
+		script.Parent.Parent.Parent.Parent.Parent.Enabled = false
+		wait(1)
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftWare/main/Credits?token=GHSAT0AAAAAABT6RN4VUXGUEIBFGUIY4S3KYTUF6PQ")()
+		script.Parent:TweenSize(UDim2.new(0, 0, 0), "Out", "Linear", 1, true)
+	end
+	
+	
+	while wait() do
+		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
+		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
+		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
+		local color = Color3.new(r, g, b)
+		script.Parent.BackgroundColor3 = color
+	end
+end
+coroutine.wrap(BWHFQ_fake_script)()
+local function OAJF_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local text = script.Parent.TextLabel
+	
+	while wait() do
+		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
+		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
+		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
+		local color = Color3.new(r, g, b)
+		text.TextColor3 = color
+	end
+	
+end
+coroutine.wrap(OAJF_fake_script)()
+local function NLDJ_fake_script() -- Background.Dragify 
+	local script = Instance.new('LocalScript', Background)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(NLDJ_fake_script)()
