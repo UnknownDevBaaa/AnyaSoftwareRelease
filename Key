@@ -1,0 +1,194 @@
+
+local Main = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local MF = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Back = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = Main
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.221774191, 0, 0.351888657, 0)
+main.Size = UDim2.new(0, 415, 0, 31)
+
+MF.Name = "MF"
+MF.Parent = main
+MF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MF.Position = UDim2.new(-0.0106805563, 0, 0.888076961, 0)
+MF.Size = UDim2.new(0, 424, 0, 174)
+MF.ZIndex = 3
+
+UICorner.Parent = MF
+
+TextLabel.Parent = MF
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0, 0, -0.17845978, 0)
+TextLabel.Size = UDim2.new(0.001, 424, 00.055, 37)
+TextLabel.ZIndex = 3
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Key System"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_2.Parent = TextLabel
+
+TextLabel_2.Parent = MF
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0.525632024, 0, 0.150479525, 0)
+TextLabel_2.Size = UDim2.new(0, 186, 0, 120)
+TextLabel_2.ZIndex = 3
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "How To Get Key? To Get key join discord: https://discord.gg/2EjN7dU4uz"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UICorner_3.Parent = TextLabel_2
+
+TextBox.Parent = main
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.0639303029, 0, 1.86709523, 0)
+TextBox.Size = UDim2.new(0, 160, 0, 37)
+TextBox.ZIndex = 4
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+TextButton.MouseButton1Click:Connect(function()
+	if TextBox.Text == "RELEASEV2" then
+		TextBox.Text = "Checking Key."
+		wait(1)
+		TextBox.Text = "Checking Key.."
+		wait(1)
+		TextBox.Text = "Checking Key..."
+		wait(1)
+		TextBox.Text = "Checking Whitelist..."
+		wait(1)
+		TextBox.Text = "Loading..."
+		wait(1)
+		TextBox.Text = "Succes!"
+		wait(1)
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftWare/main/Loading?token=GHSAT0AAAAAABT6RN4UFNVWOKHX3ISL7HUUYTQDYTQ")()
+		main.Visible = false
+	elseif TextBox.Text ~= "RELEASEV2" then
+		TextBox.Text = "Checking Key."
+		wait(1)
+		TextBox.Text = "Checking Key.."
+		wait(1)
+		TextBox.Text = "Checking Key..."
+		wait(1)
+		TextBox.Text = "Checking Whitelist..."
+		wait(1)
+		TextBox.Text = "Authentication Failed."
+	end
+end)
+
+UICorner_4.Parent = TextBox
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.021568656, 0, 3.50902748, 0)
+TextButton.Size = UDim2.new(0, 195, 0, 21)
+TextButton.ZIndex = 4
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Enter"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UICorner_5.Parent = TextButton
+
+Back.Name = "Back"
+Back.Parent = main
+Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Back.Position = UDim2.new(-0.0350107215, 0, -0.419240654, 0)
+Back.Size = UDim2.new(0, 443, 0, 225)
+
+UICorner_6.Parent = Back
+
+
+
+local function RSWQ_fake_script() -- Back.LocalScript 
+	local script = Instance.new('LocalScript', Back)
+
+	local back = script.Parent
+	
+	while wait() do
+		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
+		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
+		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
+		local color = Color3.new(r, g, b)
+		back.BackgroundColor3 = color
+	end
+end
+coroutine.wrap(RSWQ_fake_script)()
+local function IVAB_fake_script() -- main.Dragify 
+	local script = Instance.new('LocalScript', main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(IVAB_fake_script)()
+
+
+TextLabel.Text = "Welcome "..game.Players.LocalPlayer.Name.."!"
+
+while wait() do
+		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
+		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
+		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
+		local color = Color3.new(r, g, b)
+		TextLabel.TextColor3 = color
+	end
