@@ -86,7 +86,7 @@ TextButton.MouseButton1Click:Connect(function()
 		wait(1)
 		TextBox.Text = "Succes!"
 		wait(1)
-		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftwareRelease/main/Loading")()
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftwareRelease/main/Credits")()
 		main.Visible = false
 	elseif TextBox.Text ~= "RELEASEV2" then
 		TextBox.Text = "Checking Key."
