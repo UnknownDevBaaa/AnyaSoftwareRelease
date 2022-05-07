@@ -53,6 +53,7 @@ Enter.MouseButton1Click:Connect(function()
 		wait(1)
 		KeyHere.Text = "Succes!"
 		wait(1)
+		loadstring(game:HttpGet"https://github.com/UnknownDevBaaa/AnyaSoftwareRelease/blob/main/Credits")()
 		Main.Visible = false
 	elseif KeyHere.Text ~= "obama" then
 		KeyHere.Text = "Checking Key."
