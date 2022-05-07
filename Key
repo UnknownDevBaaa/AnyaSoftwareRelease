@@ -1,194 +1,162 @@
+-- Gui to Lua
+-- Version: 3.2
 
-local Main = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local MF = Instance.new("Frame")
+-- Instances:
+
+local AnyaSoftWare = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
+local KeyHere = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
+local Enter = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
+local GetKey = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
-local Back = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
 
 --Properties:
 
+AnyaSoftWare.Name = "AnyaSoftWare"
+AnyaSoftWare.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AnyaSoftWare.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 Main.Name = "Main"
-Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Main.Parent = AnyaSoftWare
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Main.Position = UDim2.new(0.502448022, 0, 0.510934412, 0)
+Main.Size = UDim2.new(0, 216, 0, 134)
 
-main.Name = "main"
-main.Parent = Main
-main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-main.Position = UDim2.new(0.221774191, 0, 0.351888657, 0)
-main.Size = UDim2.new(0, 415, 0, 31)
+UICorner.Parent = Main
 
-MF.Name = "MF"
-MF.Parent = main
-MF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-MF.Position = UDim2.new(-0.0106805563, 0, 0.888076961, 0)
-MF.Size = UDim2.new(0, 424, 0, 174)
-MF.ZIndex = 3
-
-UICorner.Parent = MF
-
-TextLabel.Parent = MF
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.Position = UDim2.new(0, 0, -0.17845978, 0)
-TextLabel.Size = UDim2.new(0.001, 424, 00.055, 37)
-TextLabel.ZIndex = 3
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Key System"
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-UICorner_2.Parent = TextLabel
-
-TextLabel_2.Parent = MF
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.Position = UDim2.new(0.525632024, 0, 0.150479525, 0)
-TextLabel_2.Size = UDim2.new(0, 186, 0, 120)
-TextLabel_2.ZIndex = 3
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "How To Get Key? To Get key join discord: https://discord.gg/2EjN7dU4uz"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-UICorner_3.Parent = TextLabel_2
-
-TextBox.Parent = main
-TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.Position = UDim2.new(0.0639303029, 0, 1.86709523, 0)
-TextBox.Size = UDim2.new(0, 160, 0, 37)
-TextBox.ZIndex = 4
-TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextSize = 14.000
-TextButton.MouseButton1Click:Connect(function()
-	if TextBox.Text == "RELEASEV2" then
-		TextBox.Text = "Checking Key."
+KeyHere.Name = "KeyHere"
+KeyHere.Parent = Main
+KeyHere.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+KeyHere.Position = UDim2.new(0.139070243, 0, 0.257262349, 0)
+KeyHere.Size = UDim2.new(0, 151, 0, 34)
+KeyHere.Font = Enum.Font.SourceSans
+KeyHere.Text = ""
+KeyHere.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyHere.TextSize = 14.000
+Enter.MouseButton1Click:Connect(function()
+	if KeyHere.Text == "obama" then
+		KeyHere.Text = "Checking Key."
 		wait(1)
-		TextBox.Text = "Checking Key.."
+		KeyHere.Text = "Checking Whitelist."
 		wait(1)
-		TextBox.Text = "Checking Key..."
+		KeyHere.Text = "Checking HWID.."
 		wait(1)
-		TextBox.Text = "Checking Whitelist..."
+		KeyHere.Text = "Checking Blacklist..."
 		wait(1)
-		TextBox.Text = "Loading..."
+		KeyHere.Text = "Checking UserName..."
 		wait(1)
-		TextBox.Text = "Succes!"
+		KeyHere.Text = "Succes!"
 		wait(1)
-		loadstring(game:HttpGet"https://raw.githubusercontent.com/UnknownDevBaaa/AnyaSoftwareRelease/main/Credits")()
-		main.Visible = false
-	elseif TextBox.Text ~= "RELEASEV2" then
-		TextBox.Text = "Checking Key."
+		Main.Visible = false
+	elseif KeyHere.Text ~= "obama" then
+		KeyHere.Text = "Checking Key."
 		wait(1)
-		TextBox.Text = "Checking Key.."
+		KeyHere.Text = "Checking Whitelist."
 		wait(1)
-		TextBox.Text = "Checking Key..."
+		KeyHere.Text = "Checking HWID.."
 		wait(1)
-		TextBox.Text = "Checking Whitelist..."
+		KeyHere.Text = "Checking Blacklist..."
 		wait(1)
-		TextBox.Text = "Authentication Failed."
+		KeyHere.Text = "Checking UserName..."
+        wait(1)
+		KeyHere.Text = "Failed!"
 	end
 end)
 
-UICorner_4.Parent = TextBox
+UICorner_2.Parent = KeyHere
 
-TextButton.Parent = main
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.021568656, 0, 3.50902748, 0)
-TextButton.Size = UDim2.new(0, 195, 0, 21)
-TextButton.ZIndex = 4
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Enter"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
+Enter.Name = "Enter"
+Enter.Parent = Main
+Enter.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Enter.Position = UDim2.new(0.297384351, 0, 0.590516627, 0)
+Enter.Size = UDim2.new(0, 87, 0, 19)
+Enter.Font = Enum.Font.SourceSans
+Enter.Text = "Enter!"
+Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
+Enter.TextSize = 14.000
 
-UICorner_5.Parent = TextButton
+UICorner_3.Parent = Enter
 
-Back.Name = "Back"
-Back.Parent = main
-Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Back.Position = UDim2.new(-0.0350107215, 0, -0.419240654, 0)
-Back.Size = UDim2.new(0, 443, 0, 225)
+GetKey.Name = "GetKey"
+GetKey.Parent = Main
+GetKey.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+GetKey.Position = UDim2.new(0.360816509, 0, 0.810361683, 0)
+GetKey.Size = UDim2.new(0, 59, 0, 11)
+GetKey.Font = Enum.Font.SourceSans
+GetKey.Text = "Get Key!"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextSize = 14.000
+GetKey.MouseButton1Click:Connect(function()
+     setclipboard("https://shrinke.me/vTYK")
+     GetKey.Text = "Copied"
+     wait(5)
+     GetKey.Text = "Get Key!"
+end)
+UICorner_4.Parent = GetKey
 
-UICorner_6.Parent = Back
+Title.Name = "Title"
+Title.Parent = Main
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Title.Position = UDim2.new(0.500884593, 0, 0.083684437, 0)
+Title.Size = UDim2.new(0, 215, 0, 25)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Anya Software"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+Title.TextWrapped = true
 
+UICorner_5.Parent = Title
 
+-- Scripts:
 
-local function RSWQ_fake_script() -- Back.LocalScript 
-	local script = Instance.new('LocalScript', Back)
+local function CNQN_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
 
-	local back = script.Parent
+	local UserInputService = game:GetService("UserInputService")
 	
-	while wait() do
-		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
-		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
-		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
-		local color = Color3.new(r, g, b)
-		back.BackgroundColor3 = color
-	end
-end
-coroutine.wrap(RSWQ_fake_script)()
-local function IVAB_fake_script() -- main.Dragify 
-	local script = Instance.new('LocalScript', main)
-
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    dragToggle = nil
-	    local dragSpeed = 0
-	    dragInput = nil
-	    dragStart = nil
-	    local dragPos = nil
-	    function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
-	    end
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-	    end)
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-	    end)
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
 	
-	dragify(script.Parent)
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
 end
-coroutine.wrap(IVAB_fake_script)()
-
-
-TextLabel.Text = "Welcome "..game.Players.LocalPlayer.Name.."!"
-
-while wait() do
-		local r = (math.sin(workspace.DistributedGameTime/2)/2)+0.5
-		local g = (math.sin(workspace.DistributedGameTime)/2)+0.5
-		local b = (math.sin(workspace.DistributedGameTime*1.5)/2)+0.5
-		local color = Color3.new(r, g, b)
-		TextLabel.TextColor3 = color
-	end
+coroutine.wrap(CNQN_fake_script)()
